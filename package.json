@@ -1,7 +1,7 @@
 {
-  "name": "Collection",
+  "name": "collection",
   "version": "1.0.0",
-  "description": "This is a repo to collect my daily reading stuff.",
+  "description": "a repo to collect my daily reading stuff",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,9 +10,8 @@
     "type": "git",
     "url": "git+https://github.com/BenbinbinCollection/BenbinbinCollection.github.io.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "BenThomson",
+  "license": "CC-BY-SA-4.0",
   "bugs": {
     "url": "https://github.com/BenbinbinCollection/BenbinbinCollection.github.io/issues"
   },
