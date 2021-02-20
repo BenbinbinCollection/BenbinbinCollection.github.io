@@ -19,6 +19,11 @@
   },
   "homepage": "https://github.com/BenbinbinCollection/BenbinbinCollection.github.io#readme",
   "devDependencies": {
+    "@kawarimidoll/vuepress-plugin-tailwind": "^2.0.0",
+    "@tailwindcss/postcss7-compat": "^2.0.3",
+    "autoprefixer": "^9.8.6",
+    "postcss": "^7.0.35",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.3",
     "vuepress": "^1.8.2"
   }
 }
