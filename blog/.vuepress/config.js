@@ -1,6 +1,7 @@
 module.exports = {
   title: 'Collection',
-  theme: 'gungnir',
+  description: '一个收集我日常所读和所思的博客',
+  theme: 'casper',
   plugins: [
     "@kawarimidoll/tailwind",
   ],
@@ -8,73 +9,39 @@ module.exports = {
     ["link", { rel: "icon", href: "/images/ben.png" }],
     ["meta", { name: "viewport", content: "width=device-width,initial-scale=1,user-scalable=no" }]
   ],
+  markdown: {
+    anchor: {
+      permalink: false,
+      permalinkBefore: false
+    }
+  },
   themeConfig: {
-    personalInfo: {
-      // 必须：名称，将在首页、移动端侧边栏和文章作者信息处显示
-      name: "Ben",
+    cover: '/images/home-bg/data-crop-filter.png',
+    logo: '/images/Collection.png',
+    nav: [{
+      text: '主页',
+      link: '/'
+    }, {
+      text: '文章列表',
+      link: '/posts'
+    }, {
+      text: '可视化',
+        link: '/category/data-vis'
+    }],
 
-      // 必须：头像，将在首页和移动端侧边栏显示
-      avatar: "/images/Ben.png",
-
-      // 必须：个人简介，将在首页显示
-      description: 'A repo to collect my daily reading and thinking.',
-
-      // 可选：社交平台账号，将在首页和移动端侧边栏显示
-      sns: {
-        github: 'BenbinbinCollection',  // Github
-        twitter: 'Benbinbin_fun',  // 推特
-        weibo: 'binbindesign',  // 新浪微博
-        email: 'mebeansbin@gmail.com',  // 邮箱
-      }
-    },
-    homeHeaderImages: [
-      // 图 1
+    footer: [
       {
-        "path": "/images/home-bg/code.jpg",
-        "mask": "rgba(40, 57, 101, .4)"
-      },
-      // 图 2
-      {
-        "path": "/images/home-bg/data.jpg",
-        "mask": "rgb(251, 170, 152, .2)"
+        text: '关于',
+        link: '/about.html'
       },
       {
-        "path": "/images/home-bg/data-vis.jpg",
-        "mask": "rgb(251, 170, 152, .2)"
-      },
-      {
-        "path": "/images/home-bg/drawing.jpg",
-        "mask": "rgb(251, 170, 152, .2)"
-      },
-      {
-        "path": "/images/home-bg/protein.jpg",
-        "mask": "rgb(251, 170, 152, .2)"
+        text: '导航页',
+        link: 'https://benbinbin.github.io/'
       },
     ],
-    footer: `
-      &copy; <a href="https://github.com/BenbinbinCollection/" target="_blank">BenThomson</a> 2021
-      <br>
-      Powered by <a href="https://vuepress.vuejs.org" target="_blank">VuePress</a> &
-      <a href="https://github.com/Renovamen/vuepress-theme-gungnir" target="_blank">Gungnir</a>
-    `,
-    lastUpdated: true,
-    katex: true,
-    mermaid: true,
-    chartjs: true,
-    roughviz: true,
-    mdPlus: {
-      all: true
-    },
-    rss: {
-      site_url: 'https://benbinbincollection.github.io/',
-      copyright: 'BenThomson 2021',
-      count: 20
-    },
+    social: {
+      github: 'https://github.com/Benbinbin',
+      twitter: 'https://twitter.com/Benbinbin_fun',
+    }
   },
-
-  markdown: {
-    // lineNumbers: true,
-    extractHeaders: ['h2', 'h3', 'h4', 'h5']
-  },
-
 }

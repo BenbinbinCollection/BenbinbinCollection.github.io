@@ -1,10 +1,12 @@
 <template>
 <div>
-    <span class="text-blue-500">test vue component</span>
+    <span class="text-yellow-500">test vue component</span>
 </div>
 </template>
 
 <script>
+import "tailwindcss/tailwind.css"
+
 export default {
 
 }

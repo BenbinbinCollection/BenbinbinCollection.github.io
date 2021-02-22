@@ -24,7 +24,9 @@
     "autoprefixer": "^9.8.6",
     "postcss": "^7.0.35",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.3",
-    "vuepress": "^1.8.2",
-    "vuepress-theme-gungnir": "^0.1.4"
+    "vuepress": "^1.8.2"
+  },
+  "dependencies": {
+    "vuepress-theme-casper": "^3.0.1"
   }
 }
