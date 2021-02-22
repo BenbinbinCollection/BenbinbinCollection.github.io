@@ -38,9 +38,13 @@ module.exports = {
         text: '导航页',
         link: 'https://benbinbin.github.io/'
       },
+      {
+        text: 'Github',
+        link: 'https://github.com/BenbinbinCollection'
+      },
     ],
     social: {
-      github: 'https://github.com/Benbinbin',
+      github: 'https://github.com/BenbinbinCollection/BenbinbinCollection.github.io',
       twitter: 'https://twitter.com/Benbinbin_fun',
     }
   },
