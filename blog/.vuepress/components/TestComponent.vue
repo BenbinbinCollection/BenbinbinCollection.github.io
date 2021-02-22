@@ -5,13 +5,10 @@
 </template>
 
 <script>
-import "tailwindcss/tailwind.css"
-
 export default {
 
 }
 </script>
 
 <style lang="scss" scoped>
-
 </style>

@@ -4,6 +4,11 @@ module.exports = {
   theme: 'casper',
   plugins: [
     "@kawarimidoll/tailwind",
+    '@maginapp/vuepress-plugin-katex',
+    ['vuepress-plugin-medium-zoom',
+      {
+        selector: '.post-full img',
+      }]
   ],
   head: [
     ["link", { rel: "icon", href: "/images/ben.png" }],
@@ -13,6 +18,9 @@ module.exports = {
     anchor: {
       permalink: false,
       permalinkBefore: false
+    },
+    extendMarkdown: md => {
+      md.use(require("markdown-it-footnote"));
     }
   },
   themeConfig: {
@@ -26,7 +34,7 @@ module.exports = {
       link: '/posts'
     }, {
       text: '可视化',
-        link: '/category/data-vis'
+      link: '/category/data-vis'
     }],
 
     footer: [

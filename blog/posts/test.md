@@ -33,9 +33,8 @@ $$ i\hbar\frac{\partial \psi}{\partial t} = \frac{-\hbar^2}{2m} ( \frac{\partial
 
 ___
 
----
-
-***
+## Image
+![test](/images/Ben.png)
 
 
 ## Emphasis
