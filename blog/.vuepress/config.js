@@ -1,3 +1,7 @@
+const feed_options = {
+  canonical_base: 'https://benbinbincollection.github.io/',
+};
+
 module.exports = {
   title: 'Collection',
   description: '一个收集我日常所读和所思的博客',
@@ -5,10 +9,13 @@ module.exports = {
   plugins: [
     "@kawarimidoll/tailwind",
     '@maginapp/vuepress-plugin-katex',
-    ['vuepress-plugin-medium-zoom',
+    [
+      'vuepress-plugin-medium-zoom',
       {
         selector: '.post-full img',
-      }]
+      }
+    ],
+    ['feed', feed_options]
   ],
   head: [
     ["link", { rel: "icon", href: "/images/ben.png" }],
@@ -49,6 +56,10 @@ module.exports = {
       {
         text: 'Github',
         link: 'https://github.com/BenbinbinCollection'
+      },
+      {
+        text: 'RSS',
+        link: './rss.xml'
       },
     ],
     social: {
