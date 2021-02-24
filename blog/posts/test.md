@@ -2,7 +2,7 @@
 title: Test
 publish: 2021-02-20
 type: post
-image: /images/home-bg/data.jpg
+image: /images/posts/data.jpg
 categories:
   - test
 tags:
