@@ -2,7 +2,7 @@
 title: Test
 publish: 2021-02-20
 type: post
-image: /images/posts/data.jpg
+image: /images/posts-cover/data.jpg
 categories:
   - test
 tags:
@@ -54,7 +54,8 @@ _This is italic text_
 
 
 > Blockquotes can also be nested...
->> ...by using additional greater-than signs right next to each other...
+> > ...by using additional greater-than signs right next to each other...
+> >
 > > > ...or with spaces between arrows.
 
 

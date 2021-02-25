@@ -2,7 +2,7 @@
 title: Learning Data Visualization
 publish: 2021-02-24
 type: post
-image: /images/posts/data-vis.jpg
+image: /images/posts-cover/data-vis.jpg
 categories:
   - data-vis
 tags:
@@ -55,11 +55,33 @@ tags:
 
 ### 创作流程
 
+1. 理解数据：与客户沟通，了解他们的目的；在前期探索可视化方式时，尽可能使用真实数据（或小规模的 sample），而不是使用模拟数据。
 
+2. 绘制草图：手绘草图进行初期的设计，并与初步的数据探索相结合，可以先尝试简单的形式（如条形图、直方图、折线图、散点图等，作者一般使用 R 的 :gear: [Tidyverse](https://www.tidyverse.org/) 或 :gear: [ggplot2](https://ggplot2.tidyverse.org/) 包来生成常见的可视化图表），以寻找合适的数据可视化方式。然后就可以基于草图与客户沟通，不断迭代，最后决定采用何种可视化方式。
 
-数据可视化的成果最后以可视形式展现，因此创建一个自己的作品集 portfolio 网站很重要，它可以成为自己的一张名片，还可以吸引更多的客户。
+   :bulb: 草图不需要特别精准，因为 datavis 是与数据结合的，最后需要接入数据才起效果，草图设计阶段只需要定性或部分定量即可，如采用何种可视化形式，是否需要连线，而不必要特别在意颜色，交互效果等细节。
 
-:bulb: 作者通过创建 [datasketch](https://www.datasketch.es/) 项目展示自己的作品，收获了不少客户。
+   ![sketch](./images/cats_and_dogs_sketch.png)
+
+   以上就是作者在为 Google News Lab 创作的 *[Why do Cats and Dogs...?](https://whydocatsanddogs.com/)* 时绘制的设计草图
+
+3. 创作可视化：作者推荐使用编程的方式将数据和可视元素进行连接和映射，因为这样创作生成的可视化作品更容易进行编辑和更新迭代，一般通过更新数据源即可响应式地更新视图层的元素。创作初期只是将数据映射到可视化元素上，效果可能很差，这需要不断地优化打磨，在该过程中可以与客户多交流，听取他们的反馈并不断迭代，以保证最后得到一个大家都满意的结果。
+
+   :bulb: 作者的开发环境和技术栈
+
+   * 编辑器：[Visual Studio Code](https://code.visualstudio.com/)
+   * 调试工具：[Chrome](https://developers.google.com/web/tools/chrome-devtools) 或 [Firefox](https://developer.mozilla.org/en-US/docs/Tools) 的 devTools 
+   * 开发框架：[D3.js](https://d3js.org/)（制作图表可能很繁琐，但是灵活性和可定制化程度极高）
+
+   ![tool_setup](./images/tool_setup.png)
+
+   作者一般在 38-inch 的显示器上将浏览器和 VS Code 以左右布局的方式来进行开发
+
+   :bulb: 前端可视化最后采用的技术都是落到 SVGs、HTML5 Canvas、webGL 之中，它们各有优势和缺点，需要基于数据集和可视化形式来选用。
+
+---
+
+:bulb: 数据可视化的成果最后以可视形式展现，因此创建一个自己的作品集 portfolio 网站很重要，它可以成为自己的一张名片，还可以吸引更多的客户。作者通过创建 [datasketch](https://www.datasketch.es/) 项目展示自己的作品，收获了不少客户。
 
 :bulb: 另外她写了一篇[博文](https://www.visualcinnamon.com/2017/03/my-journey-into-dataviz/)讲述早期如何从从研究天文学到成为转型成为一名自由职业的数据可视化设计师的过程
 
