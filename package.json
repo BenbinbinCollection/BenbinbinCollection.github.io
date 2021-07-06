@@ -1,36 +1,32 @@
 {
-  "name": "collection",
+  "name": "two-dishes-one-fish",
   "version": "1.0.0",
-  "description": "a repo to collect my daily reading stuff",
-  "main": "index.js",
+  "description": "A VuePress-next template to build a static web site as blog and knowledge management system.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "vuepress dev blog --temp .temp",
-    "build": "vuepress build blog"
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BenbinbinCollection/BenbinbinCollection.github.io.git"
+    "url": "git+https://github.com/Benbinbin/two-dishes-one-fish.git"
   },
-  "author": "BenThomson",
+  "author": "Benbinbin",
   "license": "CC-BY-SA-4.0",
   "bugs": {
-    "url": "https://github.com/BenbinbinCollection/BenbinbinCollection.github.io/issues"
+    "url": "https://github.com/Benbinbin/two-dishes-one-fish/issues"
   },
-  "homepage": "https://github.com/BenbinbinCollection/BenbinbinCollection.github.io#readme",
   "devDependencies": {
-    "@kawarimidoll/vuepress-plugin-tailwind": "^2.0.0",
-    "@maginapp/vuepress-plugin-katex": "^1.0.10",
-    "@tailwindcss/postcss7-compat": "^2.0.3",
-    "autoprefixer": "^9.8.6",
-    "markdown-it-footnote": "^3.0.2",
-    "postcss": "^7.0.35",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.3",
-    "vuepress": "^1.8.2",
-    "vuepress-plugin-feed": "^0.1.9",
-    "vuepress-plugin-medium-zoom": "^1.1.9"
+    "autoprefixer": "^10.2.6",
+    "postcss": "^8.3.0",
+    "tailwindcss": "^2.1.4",
+    "vuepress": "^2.0.0-beta.21",
+    "vuepress-vite": "^2.0.0-beta.21"
   },
   "dependencies": {
-    "vuepress-theme-casper": "^3.0.1"
+    "@neilsustc/markdown-it-katex": "^0.13.5",
+    "d3": "^6.5.0",
+    "execa": "^5.1.1",
+    "masonry-layout": "^4.2.2"
   }
 }
