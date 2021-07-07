@@ -1,35 +1,23 @@
 <template>
-  <div class="bg-gray-100">
+  <div class="min-h-screen flex flex-col bg-gray-100">
     <header
-      class="
-        h-screen
-        flex flex-col
-        justify-center
-        items-center
-        text-white
-      "
-      :style="{'background-color': color}"
+      class="flex flex-col justify-center items-center text-white"
+      :style="{ 'background-color': color }"
     >
-      <h1 class="p-8 text-center text-5xl md:text-8xl font-bold">
-        {{ title }}
-      </h1>
-      <div
-        v-if="icon"
-        class="container w-full p-8 md:p-10 flex justify-center items-center"
-      >
-        <div class="before flex-grow h-0.5 bg-white"></div>
+      <Navbar class="w-full"></Navbar>
+      <div class="container px-8 py-20">
         <img
-          class="flex-shrink-0 px-4 w-20 sm:w-24"
-          :src="$withBase(`/images/home/${icon}`)"
-          alt="tech blog logo"
+          class="mx-auto w-1/2 sm:w-2/5 md:1/3 lg:w-1/4"
+          :src="$withBase(`/images/${icon}`)"
+          alt="logo"
         />
-        <div class="after flex-grow h-0.5 bg-white"></div>
+        <p class="p-8 text-center font-light text-xs md:text-sm lg:text-base" v-html="description"></p>
       </div>
-      <p class="p-8 text-center text-lg font-bold" v-html="description"></p>
     </header>
 
-    <main class="px-8 py-16">
+    <main class="flex-grow px-8 py-16">
       <div
+        v-if="posts.length > 0"
         class="
           container
           mx-auto
@@ -41,10 +29,10 @@
         "
       >
         <button
-          v-for="card of cards"
-          :key="card.name"
+          v-for="post of posts"
+          :key="post.name"
           class="
-            card
+            post
             rounded-2xl
             pl-6
             relative
@@ -56,13 +44,13 @@
           "
           :style="{
             backgroundImage:
-              'url(' + $withBase(`/images/home/${card.image}`) + ')',
+              'url(' + $withBase(`/images/home/${post.image}`) + ')',
           }"
-          @click.exact="clickHandler(card.name)"
-          @click.ctrl.shift.exact="ctrlShiftClickHandler(card.name)"
+          @click.exact="clickHandler(post.name)"
+          @click.ctrl.shift.exact="ctrlShiftClickHandler(post.name)"
         >
-          <div class="card-body my-40 relative z-10">
-            <h3 class="text-5xl text-left font-bold">{{ card.name }}</h3>
+          <div class="post-body my-40 relative z-10">
+            <h3 class="text-5xl text-left font-bold">{{ post.name }}</h3>
           </div>
         </button>
       </div>
@@ -72,12 +60,13 @@
 </template>
 
 <script>
+import Navbar from "../../components/Navbar.vue";
 import Footer from "../../components/Footer.vue";
-import { usePageFrontmatter } from "@vuepress/client";
 import { reactive, toRefs, onMounted } from "vue";
 
 export default {
   components: {
+    Navbar,
     Footer,
   },
   setup(props) {
@@ -88,7 +77,7 @@ export default {
       icon: "",
       description: "",
       color: "",
-      cards: [],
+      posts: [],
       clickHandler: () => {},
       ctrlShiftClickHandler: () => {},
     });
@@ -109,8 +98,7 @@ export default {
     data.icon = __HOME_PAGE_ICON__ || "";
     data.description =
       __HOME_DESCRIPTION__ || "A blog and knowledge management system.";
-    data.color = __HOME_PAGE_COLOR__ || "#9CA3AF";
-    data.cards = usePageFrontmatter().value.cards || [];
+    data.color = __HOME_PAGE_COLOR__ || "#292d31";
 
     const refData = toRefs(data);
     return {
@@ -121,6 +109,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+header {
+  min-height: calc(100vh * 0.3);
+}
+
 .card::after {
   content: "";
   background-color: rgba(0, 0, 0, 0.25);

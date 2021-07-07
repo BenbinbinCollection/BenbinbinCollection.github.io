@@ -6,8 +6,7 @@ tags:
   - data-vis
 ---
 
-
-<!-- more -->
+# 数据可视化学习路径及经验
 
 ## By Nadieh Bremer
 

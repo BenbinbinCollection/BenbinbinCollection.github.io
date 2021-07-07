@@ -1,7 +1,7 @@
 const { path } = require('@vuepress/utils')
 
 module.exports = {
-  open: true,
+  // open: true,
   lang: 'zh-CN',
   base: "/Collection/",
   title: "Collection",
@@ -36,7 +36,19 @@ module.exports = {
   // },
   plugins: [
     require('./plugins/addTime.js'),
-    require('./plugins/createHomePage.js'),
+    [require('./plugins/createHomePage.js'),
+      {
+        cards: [
+          {
+            name: "vis",
+            image: "vis.svg"
+          },
+          {
+            name: "posts",
+            image: "posts.svg"
+          },
+        ]
+      }],
     [require('./plugins/generateListPages.js'),
     {
       postClassifications: ['vis', 'posts']
@@ -68,8 +80,9 @@ module.exports = {
   define: {
     __BASE__: "/Collection/",
     __HOME_PAGE_TITLE__: "COLLECTION",
+    __HOME_PAGE_ICON__: "logo.png",
     __HOME_DESCRIPTION__: "一个收集我日常所读和所思的博客",
-    __HOME_PAGE_COLOR__: '#090a0b',
+    __HOME_PAGE_COLOR__: '#292d31',
     __AVATAR__: 'avatar.png',
     __CLASSIFICATIONS__: ['All', 'Vis', 'Posts'],
     __FOLDERS__: ['Vis', 'Posts'],

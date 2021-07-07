@@ -1,8 +1,6 @@
 ---
-type: post
+show: true
 cover: data.jpg
-categories:
-  - test
 tags:
   - test
 ---
