@@ -18,10 +18,20 @@
       </div>
     </header>
 
-    <main class="container mx-auto flex-grow px-8 md:px-16 py-16 space-y-8">
+    <main class="container mx-auto flex-grow px-8 md:px-16 py-16 space-y-4">
       <div
         v-if="latestPosts.length > 0"
-        class="first-card w-full grid grid-cols-1 md:grid-cols-3 sm:gap-4 lg:gap-8 "
+        class="
+          first-card
+          w-full
+          py-4
+          hidden
+          sm:grid
+          grid-cols-1
+          md:grid-cols-3
+          sm:gap-4
+          lg:gap-8
+        "
       >
         <a
           class="col-span-1 md:col-span-2"
@@ -110,6 +120,7 @@
             </div>
           </div>
           <div
+            v-if="latestPosts[0].tags.length > 0"
             class="
               card-footer
               tags
@@ -131,6 +142,7 @@
           </div>
         </div>
       </div>
+      <home-card class="py-4 sm:hidden" :post="latestPosts[0]"></home-card>
       <div
         v-if="latestPosts.length > 1"
         class="
@@ -138,7 +150,9 @@
           grid grid-cols-1
           sm:grid-cols-2
           lg:grid-cols-3
-          gap-x-8 gay-y-8 sm:gap-y-16
+          gap-x-8
+          gap-y-4
+          sm:gap-y-8
         "
       >
         <home-card
@@ -146,7 +160,6 @@
           :key="post.key"
           :post="post"
           class="py-4"
-          @setCollection="setCollectionHandler"
         ></home-card>
       </div>
     </main>

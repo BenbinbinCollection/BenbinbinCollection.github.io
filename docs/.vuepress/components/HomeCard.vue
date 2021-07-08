@@ -66,6 +66,7 @@
     </div>
 
     <div
+      v-if="post.tags.length > 0"
       class="
         card-footer
         tags
