@@ -26,9 +26,7 @@ tags:
 
 > know the rules before you break them
 
-作者提到最佳实践的建议大部分都从**书籍**中获得，因为编纂成书的内容大部分都是经过专家审阅的，此外她还专门有一篇博文持续更新介绍自己读过与数据可视化相关的优质书籍。
-
-:link: [Data Visualization Book Reviews](https://www.visualcinnamon.com/resources/learning-data-visualization/books/)
+作者提到最佳实践的建议大部分都从**书籍**中获得，因为编纂成书的内容大部分都是经过专家审阅的，此外她还专门有一篇文章 [Data Visualization Book Reviews](https://www.visualcinnamon.com/resources/learning-data-visualization/books/) 持续更新介绍自己读过与数据可视化相关的优质书籍。
 
 ### 不断创作
 
@@ -42,9 +40,9 @@ tags:
 
 ### 设计技能 VS. 数据技术
 
-由于数据可视化的基础是**数据**，因此夯实数据分析处理能力很重要。作者推荐学习著名大学的MOOC 课程，如 Harvard 在 edX 上的 :link: [Data science](https://www.edx.org/course/subject/data-science) 课程。如果对于数据还感到恐惧，作者极力推荐阅读 :link: *[Truthful Art](https://www.amazon.com/gp/product/0321934075/ref=as_li_qf_asin_il_tl?ie=UTF8&tag=visuacinna-20&creative=9325&linkCode=as2&creativeASIN=0321934075&linkId=3c91978e69d6ab9794431c1d6a9015bd)*
+由于数据可视化的基础是**数据**，因此夯实数据分析处理能力很重要。作者推荐学习著名大学的MOOC 课程，如 Harvard 在 edX 上的 :memo: [Data science](https://www.edx.org/course/subject/data-science) 课程。如果对于数据还感到恐惧，作者极力推荐阅读 :books: *[Truthful Art](https://www.amazon.com/gp/product/0321934075/ref=as_li_qf_asin_il_tl?ie=UTF8&tag=visuacinna-20&creative=9325&linkCode=as2&creativeASIN=0321934075&linkId=3c91978e69d6ab9794431c1d6a9015bd)*
 
-:bulb: 数据处理工具作者极力推荐学习 [R](https://www.r-project.org/) 和 [python](https://www.python.org/)，以对数据进行正确的清洗和统计分析。python 适用场景更广泛，而 R 则更易上手。
+:bulb: 数据处理工具作者极力推荐学习 :hammer: [R](https://www.r-project.org/) 和 :hammer: [python](https://www.python.org/)，以对数据进行正确的清洗和统计分析。python 适用场景更广泛，而 R 则更易上手。
 
 对于设计技能，作者通过收集好的作品来获取灵感，从中解构获得所需的设计元素，例如她会为项目创建一个 [Pinterest 面板](https://www.pinterest.com/nadiehbremer/)，将尽可能多的相关的作品或素材放进去。
 
@@ -52,7 +50,7 @@ tags:
 
 1. 理解数据：与客户沟通，了解他们的目的；在前期探索可视化方式时，尽可能使用真实数据（或小规模的 sample），而不是使用模拟数据。
 
-2. 绘制草图：手绘草图进行初期的设计，作者使用 :gear: [Tayasui Sketches](https://tayasui.com/sketches/) 软件进行绘制，并与初步的数据探索相结合，可以先尝试简单的形式（如条形图、直方图、折线图、散点图等，作者一般使用 R 的 :gear: [Tidyverse](https://www.tidyverse.org/) 或 :gear: [ggplot2](https://ggplot2.tidyverse.org/) 包来生成常见的可视化图表），以寻找合适的数据可视化方式。然后就可以基于草图与客户沟通，不断迭代，最后决定采用何种可视化方式。
+2. 绘制草图：手绘草图进行初期的设计，作者使用 :hammer: [Tayasui Sketches](https://tayasui.com/sketches/) 软件进行绘制，并与初步的数据探索相结合，可以先尝试简单的形式（如条形图、直方图、折线图、散点图等，作者一般使用 R 的 :hammer: [Tidyverse](https://www.tidyverse.org/) 或 :hammer: [ggplot2](https://ggplot2.tidyverse.org/) 包来生成常见的可视化图表），以寻找合适的数据可视化方式。然后就可以基于草图与客户沟通，不断迭代，最后决定采用何种可视化方式。
 
    :bulb: 草图不需要特别精准，因为 datavis 是与数据结合的，最后需要接入数据才起效果，草图设计阶段只需要定性或部分定量即可，如采用何种可视化形式，是否需要连线，而不必要特别在意颜色，交互效果等细节。
 
