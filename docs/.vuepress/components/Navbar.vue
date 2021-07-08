@@ -53,7 +53,14 @@
       </button>
       <button
         v-show="showMoreModal"
-        class="p-2 select-none hover:bg-gray-100 rounded-md text-red-400 hover:text-red-500"
+        class="
+          p-2
+          select-none
+          hover:bg-gray-100
+          rounded-md
+          text-red-400
+          hover:text-red-500
+        "
         @click="showMoreModal = false"
       >
         <svg
@@ -82,6 +89,7 @@
           flex flex-col
           space-y-2
           bg-gray-100
+          text-gray-500
           rounded-md
           opacity-90
         "
@@ -93,14 +101,11 @@
             select-none
             text-sm text-center
             font-bold
+            text-gray-400
             hover:text-gray-900
             hover:bg-gray-200
             rounded-md
           "
-          :class="{
-            'text-gray-900': currentItem === item.toLowerCase(),
-            'text-gray-400': currentItem !== item.toLowerCase(),
-          }"
           v-for="item of navbarItemsList"
           :key="item"
           @click="changeURL(item, $event)"
