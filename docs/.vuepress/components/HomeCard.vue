@@ -24,6 +24,7 @@
           v-if="post.folder"
           class="font-bold text-blue-400 hover:text-blue-500"
           :href="$withBase(`/postslist/${post.folder}`)"
+          target="_blank"
         >
           {{ post.folder }}
         </a>
@@ -86,6 +87,7 @@
           hover:text-blue-500
         "
         :href="$withBase(`/postslist/${post.folder}#${tag}`)"
+        target="_blank"
         >#{{ tag }}</a
       >
     </div>

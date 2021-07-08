@@ -2,8 +2,7 @@
 
 This is a repo to collect my daily reading and thinking.
 
-## Stack and Theme
-Power by [VuePress](https://vuepress.vuejs.org/) and the blog theme is [vuepress-theme-casper](https://github.com/alexander-heimbuch/vuepress-theme-casper)
-
+## Theme
+Base on [Two Dishes One Fish](https://github.com/Benbinbin/two-dishes-one-fish) redesign homepage and add about me page.
 ## License
 [CC-BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)

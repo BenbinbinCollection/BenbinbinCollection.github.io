@@ -55,6 +55,7 @@
                 v-if="latestPosts[0].folder"
                 class="font-bold text-blue-400 hover:text-blue-500"
                 :href="$withBase(`/postslist/${latestPosts[0].folder}`)"
+                target="_blank"
               >
                 {{ latestPosts[0].folder }}
               </a>
@@ -124,15 +125,23 @@
               :key="tag"
               class="flex-shrink-0 text-gray-400 text-xs hover:text-blue-500"
               :href="$withBase(`/postslist/${latestPosts[0].folder}#${tag}`)"
+              target="_blank"
               >#{{ tag }}</a
             >
           </div>
         </div>
       </div>
-      <hr class="border-gray-200"/>
+      <hr class="border-gray-200" />
       <div
         v-if="latestPosts.length > 1"
-        class="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16 divide-y divide-gray-200"
+        class="
+          w-full
+          grid grid-cols-1
+          sm:grid-cols-2
+          lg:grid-cols-3
+          gap-x-8 gap-y-16
+          divide-y divide-gray-200
+        "
       >
         <home-card
           v-for="post of latestPosts.slice(1)"
