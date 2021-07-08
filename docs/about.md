@@ -1,7 +1,8 @@
 ---
-title: 关于
-type: page
+layout: AboutMeLayout
 ---
+
+# 关于我
 
 您好，我是 [Benbinbin](https://benbinbin.github.io/Portfolio/) 一个创作者，我创建这个博客为了记录日常所读和所思，主要是对外文的一些摘录翻译并加上自己的一些思考，主题涉及：
 
