@@ -8,5 +8,6 @@ module.exports = {
     ClassificationLayout: path.resolve(__dirname, 'layouts/ClassificationLayout.vue'),
     FolderLayout: path.resolve(__dirname, 'layouts/FolderLayout.vue'),
     Layout: path.resolve(__dirname, 'layouts/Layout.vue'),
+    AboutMeLayout: path.resolve(__dirname, 'layouts/AboutMeLayout.vue')
   },
 }

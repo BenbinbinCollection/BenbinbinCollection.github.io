@@ -1,16 +1,17 @@
 const { createPage } = require('@vuepress/core')
 
 const createHomePage = (options, app) => {
-  let posts = [];
+  let latestPosts = [];
 
   return {
     name: 'vuepress-plugin-createHomePage',
     async onInitialized(app) {
-      // extract the latest 10 posts show in homepage
+
       const mdReg = /\.md$/
+      let posts = [];
       app.pages.forEach((page) => {
         let folder = '';
-        if (page.filePathRelative) {
+        if (page.filePathRelative && page.frontmatter.show) {
           const firstElem = page.filePathRelative.split("/")[0]
           if (!mdReg.test(firstElem)) folder = firstElem;
           posts.push({
@@ -23,6 +24,8 @@ const createHomePage = (options, app) => {
             createdTime: page.frontmatter.createdTime || null,
             updatedTime: page.frontmatter.updatedTime || null,
             date: page.frontmatter.date || null,
+            summary: page.frontmatter.summary || '',
+            cover: page.frontmatter.cover || ''
           })
         }
       })
@@ -32,15 +35,14 @@ const createHomePage = (options, app) => {
         const timeB = postB.date || postB.createdTime;
 
         if (timeA && timeB) {
-          return new Date(timeA) - new Date(timeB);
+          return new Date(timeB) - new Date(timeA);
         } else {
           return 0;
         }
       });
-      posts.forEach(post => {
-        console.log(post.title);
-        console.log((new Date(post.createdTime)).toLocaleString())
-      })
+
+      // extract the latest 10 posts show in homepage
+      latestPosts = posts.slice(0, 10);
 
       // if homepage doesn't exist
       if (app.pages.every((page) => page.path !== '/')) {
@@ -58,16 +60,16 @@ const createHomePage = (options, app) => {
         app.pages.push(homepage)
       }
     },
-    // extendsPageData: (page, app) => {
-    //   // add data to each folder navigation pages
-    //   if (page.frontmatter.folder) {
-    //     return {
-    //       postsData: postFolders[page.frontmatter.folder]
-    //     }
-    //   } else {
-    //     return {}
-    //   }
-    // },
+    extendsPageData: (page, app) => {
+      // add latest 10 posts data homepage
+      if (page.path === '/') {
+        return {
+          latestPosts: latestPosts,
+        }
+      } else {
+        return {}
+      }
+    },
   }
 }
 

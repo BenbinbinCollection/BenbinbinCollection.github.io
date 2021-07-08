@@ -3,11 +3,11 @@ const { path } = require('@vuepress/utils')
 module.exports = {
   // open: true,
   lang: 'zh-CN',
-  base: "/Collection/",
+  base: "/",
   title: "Collection",
   description: 'A blog to collect my daily reading and thinking.',
   head: [
-    ['link', { rel: 'icon', href: '/Collection/images/favicon.ico' }],
+    ['link', { rel: 'icon', href: '/images/favicon.ico' }],
     ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/katex@0.13.5/dist/katex.min.css' }],
   ],
   bundler: '@vuepress/vite',
@@ -78,7 +78,7 @@ module.exports = {
     md.use(require('@neilsustc/markdown-it-katex'), { output: 'html' })
   },
   define: {
-    __BASE__: "/Collection/",
+    __BASE__: "/",
     __HOME_PAGE_TITLE__: "COLLECTION",
     __HOME_PAGE_ICON__: "logo.png",
     __HOME_DESCRIPTION__: "一个收集我日常所读和所思的博客",
@@ -86,7 +86,7 @@ module.exports = {
     __AVATAR__: 'avatar.png',
     __CLASSIFICATIONS__: ['All', 'Vis', 'Posts'],
     __FOLDERS__: ['Vis', 'Posts'],
-    __FOOTER_AVATAR_LINK__: 'https://benbinbin.github.io/',
+    __FOOTER_AVATAR_LINK__: '/about.html',
     __AUTHOR__: 'Benbinbin',
     __FOOTER_LICENSE__: 'CC-BY-SA-4.0',
     __FOOTER_LICENSE_LINK__: 'https://creativecommons.org/licenses/by-sa/4.0/deed.en',
