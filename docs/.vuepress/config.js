@@ -80,7 +80,7 @@ module.exports = {
   define: {
     __BASE__: "/",
     __HOME_PAGE_TITLE__: "COLLECTION",
-    __HOME_PAGE_ICON__: "logo.png",
+    __HOME_PAGE_ICON__: "home_icon.png",
     __HOME_DESCRIPTION__: "一个收集我日常所读和所思的博客",
     __HOME_PAGE_COLOR__: '#292d31',
     __AVATAR__: 'avatar.png',

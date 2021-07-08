@@ -8,7 +8,7 @@
       <div class="container px-8 py-20">
         <img
           class="mx-auto w-1/2 sm:w-2/5 md:1/3 lg:w-1/4"
-          :src="$withBase(`/images/${icon}`)"
+          :src="$withBase(`/images/home/${icon}`)"
           alt="logo"
         />
         <p
@@ -21,10 +21,10 @@
     <main class="container mx-auto flex-grow px-8 md:px-16 py-16 space-y-8">
       <div
         v-if="latestPosts.length > 0"
-        class="first-card w-full grid grid-cols-3 gap-8"
+        class="first-card w-full grid grid-cols-1 md:grid-cols-3 sm:gap-4 lg:gap-8 "
       >
         <a
-          class="col-span-2"
+          class="col-span-1 md:col-span-2"
           :href="$withBase(latestPosts[0].pathRelative)"
           target="_blank"
         >
@@ -131,7 +131,6 @@
           </div>
         </div>
       </div>
-      <hr class="border-gray-200" />
       <div
         v-if="latestPosts.length > 1"
         class="
@@ -139,14 +138,14 @@
           grid grid-cols-1
           sm:grid-cols-2
           lg:grid-cols-3
-          gap-x-8 gap-y-16
-          divide-y divide-gray-200
+          gap-x-8 gay-y-8 sm:gap-y-16
         "
       >
         <home-card
           v-for="post of latestPosts.slice(1)"
           :key="post.key"
           :post="post"
+          class="py-4"
           @setCollection="setCollectionHandler"
         ></home-card>
       </div>
