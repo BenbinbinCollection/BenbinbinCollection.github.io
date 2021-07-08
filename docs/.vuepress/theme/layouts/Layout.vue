@@ -152,7 +152,7 @@ export default {
         data.headings.push({
           level: headingsMap[item.nodeName],
           id: item.id,
-          text: text: item.textContent.slice(1).trim() || item.id,
+          text: item.textContent.slice(1).trim() || item.id,
         });
       });
 
