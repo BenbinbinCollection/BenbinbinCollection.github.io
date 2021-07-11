@@ -37,18 +37,18 @@ module.exports = {
   plugins: [
     require('./plugins/addTime.js'),
     [require('./plugins/createHomePage.js'),
-      {
-        cards: [
-          {
-            name: "vis",
-            image: "vis.svg"
-          },
-          {
-            name: "posts",
-            image: "posts.svg"
-          },
-        ]
-      }],
+    {
+      cards: [
+        {
+          name: "vis",
+          image: "vis.svg"
+        },
+        {
+          name: "posts",
+          image: "posts.svg"
+        },
+      ]
+    }],
     [require('./plugins/generateListPages.js'),
     {
       postClassifications: ['vis']
@@ -75,7 +75,10 @@ module.exports = {
     }
   },
   extendsMarkdown: (md) => {
-    md.use(require('@neilsustc/markdown-it-katex'), { output: 'html' })
+    md.use(require('@neilsustc/markdown-it-katex'), { output: 'html' });
+    md.use(require('markdown-it-mark'));
+    md.use(require('markdown-it-sub'));
+    md.use(require('markdown-it-sup'));
   },
   define: {
     __BASE__: "/",
