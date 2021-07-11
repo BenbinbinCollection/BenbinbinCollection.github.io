@@ -245,6 +245,7 @@ header {
 .first-card {
   .card-cover {
     min-height: 15rem;
+    height: 100%;
   }
 }
 </style>
