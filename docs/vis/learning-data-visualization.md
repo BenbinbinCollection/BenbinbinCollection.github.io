@@ -8,9 +8,7 @@ tags:
 
 # 数据可视化学习路径及经验
 
-## By Nadieh Bremer
-
-:link: 原文：​[Learning Data Visualization](https://www.visualcinnamon.com/resources/learning-data-visualization/)
+:link: 原文：[Learning Data Visualization](https://www.visualcinnamon.com/resources/learning-data-visualization/) - By Nadieh Bremer
 
 [Nadieh Bremer](https://twitter.com/NadiehBremer) 是从 2017 年开始成为一名自由职业的数据可视化设计师，她在个人[博客](https://www.visualcinnamon.com/)上发表了一篇数据可视化学习历程的[博文](https://www.visualcinnamon.com/resources/learning-data-visualization/)，对于数据可视化的入门起步方法、学习方向、学习资源都有介绍。
 
