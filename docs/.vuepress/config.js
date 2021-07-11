@@ -51,11 +51,11 @@ module.exports = {
       }],
     [require('./plugins/generateListPages.js'),
     {
-      postClassifications: ['vis', 'posts']
+      postClassifications: ['vis']
     }],
     [require('./plugins/generateFolderPages.js'),
     {
-      postFolders: ['vis', 'posts']
+      postFolders: ['vis']
     }],
   ],
   theme: path.resolve(__dirname, './theme/index.js'),
@@ -84,8 +84,8 @@ module.exports = {
     __HOME_DESCRIPTION__: "一个收集我日常所读和所思的博客",
     __HOME_PAGE_COLOR__: '#292d31',
     __AVATAR__: 'avatar.png',
-    __CLASSIFICATIONS__: ['All', 'Vis', 'Posts'],
-    __FOLDERS__: ['Vis', 'Posts'],
+    __CLASSIFICATIONS__: ['All', 'Vis'],
+    __FOLDERS__: ['Vis'],
     __FOOTER_AVATAR_LINK__: '/about.html',
     __AUTHOR__: 'Benbinbin',
     __FOOTER_LICENSE__: 'CC-BY-SA-4.0',
