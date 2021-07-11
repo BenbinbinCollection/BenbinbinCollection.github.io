@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <link rel="icon" href="/images/favicon.ico"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.5/dist/katex.min.css"><title>绘出自己的数字画像 | Collection</title><meta name="description" content="A blog to collect my daily reading and thinking."><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="generator" content="VuePress 2.0.0-beta.22">
+    <link rel="modulepreload" href="/assets/app.de744a94.js"><link rel="modulepreload" href="/assets/draw-your-own-data-portrait.html.6001accf.js"><link rel="modulepreload" href="/assets/draw-your-own-data-portrait.html.9602aa80.js">
+    <link rel="stylesheet" href="/assets/style.3f841079.css">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="min-h-screen flex flex-col"><nav class="px-4 sm:px-8 py-2 flex justify-between items-center sticky top-0 z-30 bg-white"><div class="left flex items-center space-x-0.5"><!--[--><button class="
+            catelog-btn
+            p-2
+            select-none
+            text-sm
+            font-bold
+            hover:text-gray-900
+            rounded-md
+            lg:hidden
+          " class="text-gray-400 hover:bg-gray-100 catelog-btn
+            p-2
+            select-none
+            text-sm
+            font-bold
+            hover:text-gray-900
+            rounded-md
+            lg:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"></path></svg></button><!--]--><a class="avatar p-2 hover:bg-gray-100 rounded-md" href="/#"><img src="/images/avatar.png" alt="avatar" class="w-10 h-10 rounded-full"></a></div><div class="right hidden sm:flex items-center space-x-0.5"><!--[--><button class="
+          p-2
+          select-none
+          text-sm
+          font-bold
+          hover:text-gray-900
+          hover:bg-gray-100
+          rounded-md
+        " class="text-gray-400 p-2
+          select-none
+          text-sm
+          font-bold
+          hover:text-gray-900
+          hover:bg-gray-100
+          rounded-md">All</button><button class="
+          p-2
+          select-none
+          text-sm
+          font-bold
+          hover:text-gray-900
+          hover:bg-gray-100
+          rounded-md
+        " class="text-gray-400 p-2
+          select-none
+          text-sm
+          font-bold
+          hover:text-gray-900
+          hover:bg-gray-100
+          rounded-md">Vis</button><!--]--><!--[--><button class="
+            p-2
+            select-none
+            text-sm
+            font-bold
+            hover:text-gray-900
+            rounded-md
+            hidden
+            lg:block
+          " class="text-gray-900 bg-gray-100 hover:bg-gray-200 p-2
+            select-none
+            text-sm
+            font-bold
+            hover:text-gray-900
+            rounded-md
+            hidden
+            lg:block"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"></path></svg></button><!--]--></div><div class="more-container sm:hidden relative"><button style="" class="p-2 select-none hover:bg-gray-100 rounded-md text-gray-500"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16"><path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"></path></svg></button><button style="display:none;" class="
+          p-2
+          select-none
+          hover:bg-gray-100
+          rounded-md
+          text-red-400
+          hover:text-red-500
+        "><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"></path></svg></button><div style="display:none;" class="
+          more-modal
+          p-2
+          absolute
+          top-10
+          right-0
+          z-10
+          flex flex-col
+          space-y-2
+          bg-gray-100
+          text-gray-500
+          rounded-md
+          opacity-90
+        "><!--[--><button class="
+            px-4
+            py-2
+            select-none
+            text-sm text-center
+            font-bold
+            text-gray-400
+            hover:text-gray-900
+            hover:bg-gray-200
+            rounded-md
+          ">All</button><button class="
+            px-4
+            py-2
+            select-none
+            text-sm text-center
+            font-bold
+            text-gray-400
+            hover:text-gray-900
+            hover:bg-gray-200
+            rounded-md
+          ">Vis</button><!--]--></div></div></nav><div class="relative flex-grow"><div class="theme-container no-navbar no-sidebar"><!----><div class="sidebar-mask"></div><aside class="sidebar"><!----><!--[--><!--]--><ul class="sidebar-links"><!--[--><!--]--></ul><!--[--><!--]--></aside><main class="page"><!--[--><!--]--><div class="theme-default-content"><!--[--><h1 id="绘出自己的数字画像" tabindex="-1"><a class="header-anchor" href="#绘出自己的数字画像" aria-hidden="true">#</a> 绘出自己的数字画像</h1><p>两位远洋相隔的设计师 <a href="http://giorgialupi.com/" target="_blank" rel="noopener noreferrer">Giorgia Lupi</a> 与 <a href="http://www.stefanieposavec.com/" target="_blank" rel="noopener noreferrer">Stefanie Posavec</a> 合作完成一个名为 <a href="http://giorgialupi.com/dear-data" target="_blank" rel="noopener noreferrer">Dear Data</a> 的有趣项目。她们进行了为期一年内互通信件，但信件内容不是简单的文字或精美的明信片，而是手绘的色彩丰富的数字画像。</p><p><img src="/assets/dear-data-postcards.03a70978.jpeg" alt="dear data postcards"></p><p>她们在日常记录下与自己相关的数据，然后用不同的图形元素进行映射，并绘制在一张信纸上，通过这个项目探索数据可视化的表达，她们还有不少 🎬 <a href="https://vimeo.com/133608605" target="_blank" rel="noopener noreferrer">演讲</a>介绍这个项目，也出了一本同名的 📚 ​<a href="http://giorgialupi.com/dear-data-2" target="_blank" rel="noopener noreferrer">书</a>。</p><p><img src="/assets/dear-data-book.5ef9fe5c.png" alt="two-dd-books"></p><p><a href="http://giorgialupi.com/" target="_blank" rel="noopener noreferrer">Giorgia Lupi</a> 在一场名为 🎬 <a href="https://www.ted.com/talks/giorgia_lupi_how_we_can_find_ourselves_in_data/up-next" target="_blank" rel="noopener noreferrer">How we can find ourselves in data</a> 的 Ted Talk 演讲中提及了该项目，并在相关文章中介绍了绘制一个关于自我数字画像的步骤，感觉很有趣所以摘录部分内容。</p><hr><p>🔗 原文：<a href="https://ideas.ted.com/how-to-draw-your-own-selfie-using-your-personal-data/" target="_blank" rel="noopener noreferrer">How to draw your own selfie — using your personal data</a> - Giorgia Lupi</p><p>设计师 Giorgia Lupi 致力于改变人们对于数据的刻板看法，数据并不是冷冰冰的、反应现实的数字，它可以令人感到窝心，但同时要警惕它的缺陷和不全面性。</p><p>在大数据时代，很多商业公司都会记录用户使用软件和浏览网页的行为数据，这会让我们忧虑隐私泄露或被这些公司（推荐算法）「操控」。但如果我们借鉴这种思维，主动记录自己日常数据，并用它们来量化自我，从另一个角度讲述自己的故事或许是一件很有趣的事情。</p><p>这种思考数据的角度正是 Giorgia Lupi 强调的「<a href="https://medium.com/@giorgialupi/data-humanism-the-revolution-will-be-visualized-31486a30dbfb" target="_blank" rel="noopener noreferrer">数据人文主义</a>」，将数字与其真正代表的东西关联起来，通过数据讲述其背后的故事，让数据更具生命力和色彩。</p><blockquote><p>It’s time, she says, “to begin designing ways to connect numbers to what they really stand for: knowledge, behaviors, people.”</p><p>She urges to think beyond the hackneyed forms of data visualization — the bar graphs, the linear timelines — and dream up other ways to turn statistics into a story.</p></blockquote><p>她鼓励大家超越常见的数据可视化形式——条形图、折线图——尝试其他数据可视化方式来讲述故事。类似于由数据构成的自拍照，它是个性化的，从这个层面去评价数字画像，则无绝对的评判好坏的标准。</p><p>以下是一个创建数字画像的参考流程：</p><ol><li><p>准备一张白纸和一些彩色笔</p><p><img src="/assets/prepare-draw-your-portrait.e31eefd9.jpg" alt="prepare paper"></p></li><li><p>依此回答一些关于个性的问题，并在纸上画出相应的图形</p><p><img src="/assets/question-draw-your-portrait.c3ecd174.png" alt="questions"></p></li><li><p>最后得到一张个性化的数字画像</p><p><img src="/assets/result-draw-your-portrait.388e70b6.jpg" alt="result-draw-your-portrait"></p><blockquote><p><strong>Remember that data, like us, is imperfect.</strong> “It’s time to leave behind any presumption of absolute control and universal truth,” says Lupi.</p></blockquote><p>虽然数字画像可以反映一部分个性化信息，但它是片面局部的，就像人一样并非十全十美，因此应该避免盲信从可视化图表中简单总结出来是的结论。</p></li></ol><hr><p>很多时候我们评价一个数据可视化作品的好坏，会基于一些公认的标准，例如准确性、表达清晰性、有效性等，或许普及率更高的传统的图表从这些评价标准来看是最优的选择，作者为了极力满足这一类的要求往往使得作品变得刻板。</p><p>或许情感这一主观的因素也要多尝试融入到一个数据可视化作品中，基于准确性这一底线，「牺牲」一些清晰有效性，尝试让作品更具个性化，毕竟有温度的作品和故事不是比冷冰冰的图表更好吗？</p><p>这让我想起在听播客 <em>海螺电台</em> 第 16 期<a href="https://thespiral.fm/episodes/16" target="_blank" rel="noopener noreferrer">《【海螺壳】构建专属情绪包，从如实记录开始》</a> 提到的一款数字化与实体物品结合的产品——心情日历，它是由 <a href="https://fireball.studio/" target="_blank" rel="noopener noreferrer">Fireball</a> 开发的，用 emoji 贴纸来记录每天的心情，将情绪可视化，就是一款很棒的作品。</p><p>最后作者提到的一点尤为重要：<mark>Remember that data, like us, is imperfect.</mark> 应该避免盲信从可视化中得到的结论，因为从数据图表总结的结论的可靠性会受到数据来源真实性、数据覆盖全面性、可视化转换阶段信息失真程度等因素的影响。</p><blockquote><p>We should embrace these imperfections, just as we embrace imperfections in ourselves and others. These portraits are only the start of forming a new relationship with your data. Once you feel more connected to it, you’ll see it differently. We must treat data “as the beginning of the conversation,” Lupi says, “and not the end.”</p></blockquote><p>当然我们不应该因为数字化无法完全反映真实世界而抛弃这种思考方式，反而应该努力去拥抱她，接受这些不完美，就像我们接受自己和他人的不完美一样。因为多一种思考自我的方式，就多一种认识和挖掘自我多样性的途径。这让我想起在播客 <em>不可理论</em> 第 37 期 <a href="https://www.bukelilun.com/episodes/37" target="_blank" rel="noopener noreferrer">《茫茫相似将万物勾连》</a> 中讨论了 digital 相关话题，值得一听，其中说到人就是 digital 和 anolog 的结合体，这一有趣的见解让人眼前一亮。</p><p>说到自我数字量化，其实在当今是越来越普及了，例如常见的各种穿戴设备，它们记录着我们的身体指标。上面摘录的段落主要讲述了一种新的可视化数据的角度和方法，而在可视化数据之前，收集数据是十分繁琐的，因此需要使用一些自动跟踪记录数据的工具，以下列出了一些与数字量化的相关资源，或许后经过深入研究这些实例和技术，结合实践经验写一篇自我量化的博文。</p><ul><li><p><a href="https://quantifiedself.com/" target="_blank" rel="noopener noreferrer">Quantified Self</a> 一个由用户和自我跟踪工具开发者组成的国际社区，他们对「通过数字进行自我认识」感兴趣。</p></li><li><p><a href="https://www.rescuetime.com/" target="_blank" rel="noopener noreferrer">RescueTime</a> 一个跨平台的时间管理和数字健康工具，可以跟踪用户在系统中的各种行为，分析在不同软件或网页花费的实践，提供 <a href="https://www.rescuetime.com/anapi/setup/documentation" target="_blank" rel="noopener noreferrer">API</a> 接口。</p></li><li><p><a href="https://toggl.com/" target="_blank" rel="noopener noreferrer">toggl</a> 另一款实践管理和用户行为跟踪工具。</p></li><li><p><a href="https://www.myfitnesspal.com/zh-CN/" target="_blank" rel="noopener noreferrer">MyFitnessPal</a> 记录餐饮和卡路里应用，提供 <a href="https://myfitnesspalapi.com/docs/" target="_blank" rel="noopener noreferrer">API</a> 接口</p></li><li><p><a href="https://tdeecalculator.net/" target="_blank" rel="noopener noreferrer">TDEE Calculator</a> 每日总能量消耗估算器</p></li><li><p><a href="https://www.last.fm/zh/" target="_blank" rel="noopener noreferrer">last.fm</a> 记录音乐播放的数据，提供 <a href="https://www.last.fm/zh/api" target="_blank" rel="noopener noreferrer">API</a> 接口</p></li><li><p><a href="https://web-scrobbler.com/" target="_blank" rel="noopener noreferrer">Web Scrobbler</a> 一款记录在线音乐播放记录的浏览器插件，支持连接 <a href="https://www.last.fm/zh/about/trackmymusic" target="_blank" rel="noopener noreferrer">last.fm</a>、<a href="https://libre.fm/" target="_blank" rel="noopener noreferrer">libre.fm</a>、<a href="https://listenbrainz.org/" target="_blank" rel="noopener noreferrer">listenBrainz</a></p></li><li><p><a href="https://github.com/thesephist/histools" target="_blank" rel="noopener noreferrer">Histools</a> 用于分析浏览器历史记录，提供可交互式、可过滤的热图</p></li><li><p><a href="https://github.com/cpfair/tapiriik" target="_blank" rel="noopener noreferrer">tapiriik</a> 实现各种健身软件数据同步的开源服务</p></li><li><p><a href="https://www.strava.com/" target="_blank" rel="noopener noreferrer">Strava</a> 跟踪并分析运动数据</p></li><li><p><a href="https://github.com/yihong0618/running_page" target="_blank" rel="noopener noreferrer">running_page</a> 支持整合不同健身软件的跑步数据，并生成静态网页展示可视化数据</p></li></ul><!--]--></div><footer class="page-meta"><!----><div class="meta-item last-updated"><span class="meta-item-label">更新时间: </span><span class="meta-item-info">2021/7/11 下午1:02:01</span></div><!----></footer><!----><!--[--><!--]--></main></div><div style="width:0px;" class="catalog-container absolute top-0 right-0 h-full hidden lg:block"><div class="headings-container sticky top-36" data-v-c28348e0><ul class="
+        max-w-max
+        m-2
+        pl-7
+        xl:pl-16
+        2xl:pl-20
+        py-4
+        opacity-50
+        hover:opacity-100
+        transition-all
+        duration-300
+      " data-v-c28348e0><!--[--><!--]--></ul></div></div><div style="display:none;" tabindex="0" class="
+          sidebar-container
+          fixed
+          inset-y-0
+          left-0
+          z-20
+          lg:hidden
+          opacity-10
+          hover:opacity-95
+        "><div class="headings-container
+      px-2
+      space-y-2
+      transition-all
+      duration-300 py-20" data-v-6eed9461><!--[--><!--]--></div></div></div><footer class="bg-gray-200 p-8 grid grid-cols-1 md:grid-cols-3 gap-4 items-center" data-v-2981188c><div class="flex justify-center md:justify-start items-center" data-v-2981188c><a class="p-2 hover:bg-gray-300 rounded-md" href="/about.html" target="_blank" data-v-2981188c><img src="/images/avatar.png" alt="avatar" class="w-10 h-10 rounded-full" data-v-2981188c></a></div><div class="text-center space-y-0.5" data-v-2981188c><p class="text-sm text-gray-600" data-v-2981188c> ©2021 <span class="author" data-v-2981188c>Benbinbin</span>. All Right Reserved. </p><p class="text-xs text-center text-gray-400" data-v-2981188c> 除特殊说明外，本站的文章遵循 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en" target="_blank" class="text-blue-400" data-v-2981188c>CC-BY-SA-4.0</a> 协议 </p><p class="text-xs text-center text-gray-400" data-v-2981188c> 网站主题采用 <a href="https://github.com/Benbinbin/two-dishes-one-fish" target="_blank" class="text-blue-400" data-v-2981188c>Two Dishes One Fish</a></p></div><div class="
+        btn-container
+        flex
+        justify-center
+        md:justify-end
+        items-center
+        space-x-0.5
+      " data-v-2981188c><!--[--><a class="p-2 hover:bg-gray-300 rounded-md" href="mailto:benthomsonbin@gmail.com" target="" data-v-2981188c><img src="/images/icons/email.svg" alt="email" class="w-auto h-6" data-v-2981188c></a><a class="p-2 hover:bg-gray-300 rounded-md" href="https://github.com/Benbinbin" target="_blank" data-v-2981188c><img src="/images/icons/github.svg" alt="github" class="w-auto h-6" data-v-2981188c></a><a class="p-2 hover:bg-gray-300 rounded-md" href="https://juejin.cn/user/3175045314389278/posts" target="_blank" data-v-2981188c><img src="/images/icons/juejin.svg" alt="juejin" class="w-auto h-6" data-v-2981188c></a><a class="p-2 hover:bg-gray-300 rounded-md" href="https://dribbble.com/BinBinDesign" target="_blank" data-v-2981188c><img src="/images/icons/dribbble.svg" alt="dribbble" class="w-auto h-6" data-v-2981188c></a><a class="p-2 hover:bg-gray-300 rounded-md" href="https://twitter.com/Benbinbin_fun" target="_blank" data-v-2981188c><img src="/images/icons/twitter.svg" alt="twitter" class="w-auto h-6" data-v-2981188c></a><a class="p-2 hover:bg-gray-300 rounded-md" href="https://weibo.com/binbindesign" target="_blank" data-v-2981188c><img src="/images/icons/weibo.svg" alt="weibo" class="w-auto h-6" data-v-2981188c></a><!--]--></div></footer></div><!--]--></div>
+    <script type="module" src="/assets/app.de744a94.js" defer></script>
+  </body>
+</html>

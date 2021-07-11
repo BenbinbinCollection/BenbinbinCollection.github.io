@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <link rel="icon" href="/images/favicon.ico"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.5/dist/katex.min.css"><title>数据可视化学习路径及经验 | Collection</title><meta name="description" content="A blog to collect my daily reading and thinking."><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="generator" content="VuePress 2.0.0-beta.22">
+    <link rel="modulepreload" href="/assets/app.de744a94.js"><link rel="modulepreload" href="/assets/learning-data-visualization.html.b9e2b072.js"><link rel="modulepreload" href="/assets/learning-data-visualization.html.d92ade37.js">
+    <link rel="stylesheet" href="/assets/style.3f841079.css">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="min-h-screen flex flex-col"><nav class="px-4 sm:px-8 py-2 flex justify-between items-center sticky top-0 z-30 bg-white"><div class="left flex items-center space-x-0.5"><!--[--><button class="
+            catelog-btn
+            p-2
+            select-none
+            text-sm
+            font-bold
+            hover:text-gray-900
+            rounded-md
+            lg:hidden
+          " class="text-gray-400 hover:bg-gray-100 catelog-btn
+            p-2
+            select-none
+            text-sm
+            font-bold
+            hover:text-gray-900
+            rounded-md
+            lg:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"></path></svg></button><!--]--><a class="avatar p-2 hover:bg-gray-100 rounded-md" href="/#"><img src="/images/avatar.png" alt="avatar" class="w-10 h-10 rounded-full"></a></div><div class="right hidden sm:flex items-center space-x-0.5"><!--[--><button class="
+          p-2
+          select-none
+          text-sm
+          font-bold
+          hover:text-gray-900
+          hover:bg-gray-100
+          rounded-md
+        " class="text-gray-400 p-2
+          select-none
+          text-sm
+          font-bold
+          hover:text-gray-900
+          hover:bg-gray-100
+          rounded-md">All</button><button class="
+          p-2
+          select-none
+          text-sm
+          font-bold
+          hover:text-gray-900
+          hover:bg-gray-100
+          rounded-md
+        " class="text-gray-400 p-2
+          select-none
+          text-sm
+          font-bold
+          hover:text-gray-900
+          hover:bg-gray-100
+          rounded-md">Vis</button><!--]--><!--[--><button class="
+            p-2
+            select-none
+            text-sm
+            font-bold
+            hover:text-gray-900
+            rounded-md
+            hidden
+            lg:block
+          " class="text-gray-900 bg-gray-100 hover:bg-gray-200 p-2
+            select-none
+            text-sm
+            font-bold
+            hover:text-gray-900
+            rounded-md
+            hidden
+            lg:block"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"></path></svg></button><!--]--></div><div class="more-container sm:hidden relative"><button style="" class="p-2 select-none hover:bg-gray-100 rounded-md text-gray-500"><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16"><path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"></path></svg></button><button style="display:none;" class="
+          p-2
+          select-none
+          hover:bg-gray-100
+          rounded-md
+          text-red-400
+          hover:text-red-500
+        "><svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"></path></svg></button><div style="display:none;" class="
+          more-modal
+          p-2
+          absolute
+          top-10
+          right-0
+          z-10
+          flex flex-col
+          space-y-2
+          bg-gray-100
+          text-gray-500
+          rounded-md
+          opacity-90
+        "><!--[--><button class="
+            px-4
+            py-2
+            select-none
+            text-sm text-center
+            font-bold
+            text-gray-400
+            hover:text-gray-900
+            hover:bg-gray-200
+            rounded-md
+          ">All</button><button class="
+            px-4
+            py-2
+            select-none
+            text-sm text-center
+            font-bold
+            text-gray-400
+            hover:text-gray-900
+            hover:bg-gray-200
+            rounded-md
+          ">Vis</button><!--]--></div></div></nav><div class="relative flex-grow"><div class="theme-container no-navbar no-sidebar"><!----><div class="sidebar-mask"></div><aside class="sidebar"><!----><!--[--><!--]--><ul class="sidebar-links"><!--[--><!--]--></ul><!--[--><!--]--></aside><main class="page"><!--[--><!--]--><div class="theme-default-content"><!--[--><h1 id="数据可视化学习路径及经验" tabindex="-1"><a class="header-anchor" href="#数据可视化学习路径及经验" aria-hidden="true">#</a> 数据可视化学习路径及经验</h1><p>🔗 原文：<a href="https://www.visualcinnamon.com/resources/learning-data-visualization/" target="_blank" rel="noopener noreferrer">Learning Data Visualization</a> - By Nadieh Bremer</p><p><a href="https://twitter.com/NadiehBremer" target="_blank" rel="noopener noreferrer">Nadieh Bremer</a> 是从 2017 年开始成为一名自由职业的数据可视化设计师，她在个人<a href="https://www.visualcinnamon.com/" target="_blank" rel="noopener noreferrer">博客</a>上发表了一篇数据可视化学习历程的<a href="https://www.visualcinnamon.com/resources/learning-data-visualization/" target="_blank" rel="noopener noreferrer">博文</a>，对于数据可视化的入门起步方法、学习方向、学习资源都有介绍。</p><h3 id="寻找方向" tabindex="-1"><a class="header-anchor" href="#寻找方向" aria-hidden="true">#</a> 寻找方向</h3><p>数据可视化其实是一个较广泛的领域，其中有不同的细分方向，使用的方法论和工具都不同，对于初学者应该广泛涉猎，以寻找到自己热衷的可视化方式。</p><p>找到了想去尝试的方向，互联网有很多资源可以跟着入门教程做一些项目，在这过程中会遇到不少问题，可以通过 <a href="https://stackoverflow.com/" target="_blank" rel="noopener noreferrer">StackOverflow </a> 等站点解决。</p><h3 id="最佳实践" tabindex="-1"><a class="header-anchor" href="#最佳实践" aria-hidden="true">#</a> 最佳实践</h3><p>在学习过程中需要找到<strong>最佳实践</strong>方式，而不能靠自觉，虽然实现方式有多种，基于「在打破规则之前先了解规则」的思路，遵循最佳实践才可以创作出更佳的作品。</p><blockquote><p>know the rules before you break them</p></blockquote><p>作者提到最佳实践的建议大部分都从<strong>书籍</strong>中获得，因为编纂成书的内容大部分都是经过专家审阅的，此外她还专门有一篇文章 <a href="https://www.visualcinnamon.com/resources/learning-data-visualization/books/" target="_blank" rel="noopener noreferrer">Data Visualization Book Reviews</a> 持续更新介绍自己读过与数据可视化相关的优质书籍。</p><h3 id="不断创作" tabindex="-1"><a class="header-anchor" href="#不断创作" aria-hidden="true">#</a> 不断创作</h3><blockquote><p>If there was only one tip that I could give, it would be this; <strong>create, create, create</strong>.</p></blockquote><p>对于学习没有捷径，作者觉得唯一的建议就是<strong>不断创作</strong>，通过不断的实战才可以提升技能、习得经验。初期可以模仿复刻，或进行小幅度的再创作 <em>remix</em>，例如使用一样的方法但套用自己的数据集，改变视觉元素，整合之前的经验，不断优化。</p><p>学习并非坦途，所以<strong>挑选自己感兴趣的主题</strong>进行创作才可以有更大的动力，才有激情进行持续优化，而且对于数据的洞察会更全面、更独特，对于数据展示方式才有更多的灵感。但有时候自己感兴趣的主题并不容易获得数据，但是只要有心，总会在可能的地方找到数据的，可以搜索 Github 看看别人的项目，或者自己动手来收集。</p><p>💡 别忘了记得及时更新自己的作品集和简历，把过时或觉得自己不再使用的技术剔除出去。</p><h3 id="设计技能-vs-数据技术" tabindex="-1"><a class="header-anchor" href="#设计技能-vs-数据技术" aria-hidden="true">#</a> 设计技能 VS. 数据技术</h3><p>由于数据可视化的基础是<strong>数据</strong>，因此夯实数据分析处理能力很重要。作者推荐学习著名大学的MOOC 课程，如 Harvard 在 edX 上的 📝 <a href="https://www.edx.org/course/subject/data-science" target="_blank" rel="noopener noreferrer">Data science</a> 课程。如果对于数据还感到恐惧，作者极力推荐阅读 📚 <em><a href="https://www.amazon.com/gp/product/0321934075/ref=as_li_qf_asin_il_tl?ie=UTF8&amp;tag=visuacinna-20&amp;creative=9325&amp;linkCode=as2&amp;creativeASIN=0321934075&amp;linkId=3c91978e69d6ab9794431c1d6a9015bd" target="_blank" rel="noopener noreferrer">Truthful Art</a></em></p><p>💡 数据处理工具作者极力推荐学习 🔨 <a href="https://www.r-project.org/" target="_blank" rel="noopener noreferrer">R</a> 和 🔨 <a href="https://www.python.org/" target="_blank" rel="noopener noreferrer">python</a>，以对数据进行正确的清洗和统计分析。python 适用场景更广泛，而 R 则更易上手。</p><p>对于设计技能，作者通过收集好的作品来获取灵感，从中解构获得所需的设计元素，例如她会为项目创建一个 <a href="https://www.pinterest.com/nadiehbremer/" target="_blank" rel="noopener noreferrer">Pinterest 面板</a>，将尽可能多的相关的作品或素材放进去。</p><h3 id="创作流程" tabindex="-1"><a class="header-anchor" href="#创作流程" aria-hidden="true">#</a> 创作流程</h3><ol><li><p>理解数据：与客户沟通，了解他们的目的；在前期探索可视化方式时，尽可能使用真实数据（或小规模的 sample），而不是使用模拟数据。</p></li><li><p>绘制草图：手绘草图进行初期的设计，作者使用 🔨 <a href="https://tayasui.com/sketches/" target="_blank" rel="noopener noreferrer">Tayasui Sketches</a> 软件进行绘制，并与初步的数据探索相结合，可以先尝试简单的形式（如条形图、直方图、折线图、散点图等，作者一般使用 R 的 🔨 <a href="https://www.tidyverse.org/" target="_blank" rel="noopener noreferrer">Tidyverse</a> 或 🔨 <a href="https://ggplot2.tidyverse.org/" target="_blank" rel="noopener noreferrer">ggplot2</a> 包来生成常见的可视化图表），以寻找合适的数据可视化方式。然后就可以基于草图与客户沟通，不断迭代，最后决定采用何种可视化方式。</p><p>💡 草图不需要特别精准，因为 datavis 是与数据结合的，最后需要接入数据才起效果，草图设计阶段只需要定性或部分定量即可，如采用何种可视化形式，是否需要连线，而不必要特别在意颜色，交互效果等细节。</p><p><img src="/assets/cats_and_dogs_sketch.6ae82524.png" alt="sketch"></p><p>以上就是作者在为 Google News Lab 创作的 <em><a href="https://whydocatsanddogs.com/" target="_blank" rel="noopener noreferrer">Why do Cats and Dogs...?</a></em> 时绘制的设计草图</p></li><li><p>创作可视化：作者推荐使用编程的方式将数据和可视元素进行连接和映射，因为这样创作生成的可视化作品更容易进行编辑和更新迭代，一般通过更新数据源即可响应式地更新视图层的元素。创作初期只是将数据映射到可视化元素上，效果可能很差，这需要不断地优化打磨，在该过程中可以与客户多交流，听取他们的反馈并不断迭代，以保证最后得到一个大家都满意的结果。</p><p>💡 作者的开发环境和技术栈</p><ul><li>编辑器：<a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">Visual Studio Code</a></li><li>调试工具：<a href="https://developers.google.com/web/tools/chrome-devtools" target="_blank" rel="noopener noreferrer">Chrome</a> 或 <a href="https://developer.mozilla.org/en-US/docs/Tools" target="_blank" rel="noopener noreferrer">Firefox</a> 的 devTools</li><li>开发框架：<a href="https://d3js.org/" target="_blank" rel="noopener noreferrer">D3.js</a>（制作图表可能很繁琐，但是灵活性和可定制化程度极高）</li></ul><p><img src="/assets/tool_setup.9f0776b5.png" alt="tool_setup"></p><p>作者一般在 38-inch 的显示器上将浏览器和 VS Code 以左右布局的方式来进行开发</p><p>💡 前端可视化最后采用的技术都是落到 SVGs、HTML5 Canvas、webGL 之中，它们各有优势和缺点，需要基于数据集和可视化形式来选用。</p></li></ol><hr><p>💡 数据可视化的成果最后以可视形式展现，因此创建一个自己的作品集 portfolio 网站很重要，它可以成为自己的一张名片，还可以吸引更多的客户。作者通过创建 <a href="https://www.datasketch.es/" target="_blank" rel="noopener noreferrer">datasketch</a> 项目展示自己的作品，收获了不少客户。</p><p>💡 另外她写了一篇<a href="https://www.visualcinnamon.com/2017/03/my-journey-into-dataviz/" target="_blank" rel="noopener noreferrer">博文</a>讲述早期如何从从研究天文学到成为转型成为一名自由职业的数据可视化设计师的过程</p><!--]--></div><footer class="page-meta"><!----><div class="meta-item last-updated"><span class="meta-item-label">更新时间: </span><span class="meta-item-info">2021/7/11 上午9:57:20</span></div><!----></footer><!----><!--[--><!--]--></main></div><div style="width:0px;" class="catalog-container absolute top-0 right-0 h-full hidden lg:block"><div class="headings-container sticky top-36" data-v-c28348e0><ul class="
+        max-w-max
+        m-2
+        pl-7
+        xl:pl-16
+        2xl:pl-20
+        py-4
+        opacity-50
+        hover:opacity-100
+        transition-all
+        duration-300
+      " data-v-c28348e0><!--[--><!--]--></ul></div></div><div style="display:none;" tabindex="0" class="
+          sidebar-container
+          fixed
+          inset-y-0
+          left-0
+          z-20
+          lg:hidden
+          opacity-10
+          hover:opacity-95
+        "><div class="headings-container
+      px-2
+      space-y-2
+      transition-all
+      duration-300 py-20" data-v-6eed9461><!--[--><!--]--></div></div></div><footer class="bg-gray-200 p-8 grid grid-cols-1 md:grid-cols-3 gap-4 items-center" data-v-2981188c><div class="flex justify-center md:justify-start items-center" data-v-2981188c><a class="p-2 hover:bg-gray-300 rounded-md" href="/about.html" target="_blank" data-v-2981188c><img src="/images/avatar.png" alt="avatar" class="w-10 h-10 rounded-full" data-v-2981188c></a></div><div class="text-center space-y-0.5" data-v-2981188c><p class="text-sm text-gray-600" data-v-2981188c> ©2021 <span class="author" data-v-2981188c>Benbinbin</span>. All Right Reserved. </p><p class="text-xs text-center text-gray-400" data-v-2981188c> 除特殊说明外，本站的文章遵循 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en" target="_blank" class="text-blue-400" data-v-2981188c>CC-BY-SA-4.0</a> 协议 </p><p class="text-xs text-center text-gray-400" data-v-2981188c> 网站主题采用 <a href="https://github.com/Benbinbin/two-dishes-one-fish" target="_blank" class="text-blue-400" data-v-2981188c>Two Dishes One Fish</a></p></div><div class="
+        btn-container
+        flex
+        justify-center
+        md:justify-end
+        items-center
+        space-x-0.5
+      " data-v-2981188c><!--[--><a class="p-2 hover:bg-gray-300 rounded-md" href="mailto:benthomsonbin@gmail.com" target="" data-v-2981188c><img src="/images/icons/email.svg" alt="email" class="w-auto h-6" data-v-2981188c></a><a class="p-2 hover:bg-gray-300 rounded-md" href="https://github.com/Benbinbin" target="_blank" data-v-2981188c><img src="/images/icons/github.svg" alt="github" class="w-auto h-6" data-v-2981188c></a><a class="p-2 hover:bg-gray-300 rounded-md" href="https://juejin.cn/user/3175045314389278/posts" target="_blank" data-v-2981188c><img src="/images/icons/juejin.svg" alt="juejin" class="w-auto h-6" data-v-2981188c></a><a class="p-2 hover:bg-gray-300 rounded-md" href="https://dribbble.com/BinBinDesign" target="_blank" data-v-2981188c><img src="/images/icons/dribbble.svg" alt="dribbble" class="w-auto h-6" data-v-2981188c></a><a class="p-2 hover:bg-gray-300 rounded-md" href="https://twitter.com/Benbinbin_fun" target="_blank" data-v-2981188c><img src="/images/icons/twitter.svg" alt="twitter" class="w-auto h-6" data-v-2981188c></a><a class="p-2 hover:bg-gray-300 rounded-md" href="https://weibo.com/binbindesign" target="_blank" data-v-2981188c><img src="/images/icons/weibo.svg" alt="weibo" class="w-auto h-6" data-v-2981188c></a><!--]--></div></footer></div><!--]--></div>
+    <script type="module" src="/assets/app.de744a94.js" defer></script>
+  </body>
+</html>
